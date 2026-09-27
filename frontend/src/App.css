@@ -1,0 +1,1388 @@
+/* ==========================================================================
+   HOTEL APPLICATION THEME - LUXURY CRIMSON & WINE PALETTE
+   Inspired by the hotel architecture and roof colors from the user's image
+   ========================================================================== */
+
+/* App Wrapper */
+.mdb-app-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #faf7f7;
+  color: #212529;
+}
+
+.mdb-app-body {
+  flex: 1;
+}
+
+/* ==========================================================================
+   1. TOP NAVIGATION BAR
+   ========================================================================== */
+.mdb-navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ebdada;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(136, 19, 55, 0.04);
+}
+
+.mdb-navbar-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Brand Logo */
+.mdb-brand {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1.55rem;
+  letter-spacing: -0.5px;
+}
+
+.brand-logo-img {
+  height: 34px;
+  width: auto;
+  border-radius: 4px;
+  object-fit: contain;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.brand-letter {
+  display: inline-block;
+}
+
+.brand-m {
+  color: #881337; /* Deep Crimson Wine */
+}
+
+.brand-d {
+  color: #9f1239; /* Rich Rose Wine */
+}
+
+.brand-b {
+  color: #be123c; /* Bright Wine */
+}
+
+.brand-subtitle {
+  font-size: 0.85rem;
+  color: #525252;
+  font-weight: 600;
+  margin-left: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Center Search Form */
+.mdb-search-form {
+  flex: 1;
+  max-width: 500px;
+  display: flex;
+}
+
+.mdb-search-input {
+  flex: 1;
+  padding: 8px 14px;
+  border: 1px solid #d4c4c7;
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+  font-size: 0.9rem;
+  color: #495057;
+  background-color: #ffffff;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.mdb-search-input:focus {
+  border-color: #881337;
+}
+
+.mdb-search-btn {
+  background-color: #881337;
+  color: #ffffff;
+  border: 1px solid #881337;
+  border-radius: 0 4px 4px 0;
+  padding: 0 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.15s;
+}
+
+.mdb-search-btn:hover {
+  background-color: #700c2a;
+}
+
+/* Right Navigation Actions */
+.mdb-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.mdb-action-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #4f4f4f;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.mdb-action-item:hover {
+  color: #881337;
+  background-color: #fff1f2;
+}
+
+.mdb-action-item .action-icon {
+  font-size: 1.05rem;
+}
+
+.mdb-btn-add-hotel {
+  background-color: #881337;
+  color: #ffffff !important;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 7px 14px;
+  border-radius: 4px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 2px 5px rgba(136, 19, 55, 0.25);
+  transition: background-color 0.15s, transform 0.1s;
+}
+
+.mdb-btn-add-hotel:hover {
+  background-color: #700c2a;
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   2. HERO BANNER (Rich Crimson Wine Palette)
+   ========================================================================== */
+.mdb-hero-banner {
+  background: linear-gradient(135deg, #881337 0%, #9f1239 100%);
+  color: #ffffff;
+  padding: 26px 0;
+  margin-bottom: 24px;
+  box-shadow: 0 3px 8px rgba(136, 19, 55, 0.15);
+}
+
+.mdb-banner-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.mdb-banner-title {
+  font-size: 1.85rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  letter-spacing: -0.3px;
+}
+
+.mdb-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.86rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.crumb-link {
+  color: rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.crumb-link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.crumb-separator {
+  opacity: 0.6;
+}
+
+.crumb-current {
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   3. 2-COLUMN CONTENT CONTAINER
+   ========================================================================== */
+.mdb-content-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px 40px 24px;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 24px;
+}
+
+/* ==========================================================================
+   4. LEFT SIDEBAR FILTERS
+   ========================================================================== */
+.mdb-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sidebar-card {
+  background-color: #ffffff;
+  border: 1px solid #ebdada;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.sidebar-card-header {
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f7eeee;
+  cursor: pointer;
+}
+
+.sidebar-title {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #212529;
+}
+
+.sidebar-chevron {
+  font-size: 0.75rem;
+  color: #881337;
+}
+
+.sidebar-card-body {
+  padding: 14px 16px;
+}
+
+/* Category item list */
+.category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category-list li {
+  padding: 6px 0;
+  font-size: 0.88rem;
+  color: #4f4f4f;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.category-list li:hover {
+  color: #881337;
+  font-weight: 600;
+}
+
+/* Checkbox filter items */
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 0;
+  font-size: 0.88rem;
+  color: #4f4f4f;
+  cursor: pointer;
+}
+
+.checkbox-item input[type="checkbox"] {
+  accent-color: #881337;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.checkbox-label {
+  flex: 1;
+}
+
+.checkbox-count {
+  background-color: #fdf2f4;
+  color: #881337;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+
+/* Price Filter Track */
+.price-slider-track {
+  position: relative;
+  height: 4px;
+  background-color: #f0e1e4;
+  border-radius: 2px;
+  margin: 12px 0 18px 0;
+}
+
+.slider-bar {
+  position: absolute;
+  left: 15%;
+  right: 20%;
+  height: 100%;
+  background-color: #881337;
+}
+
+.slider-handle {
+  position: absolute;
+  top: -5px;
+  width: 14px;
+  height: 14px;
+  background-color: #881337;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.slider-handle-left {
+  left: 15%;
+}
+
+.slider-handle-right {
+  right: 20%;
+}
+
+.price-inputs-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.price-input-col {
+  flex: 1;
+}
+
+.price-input-label {
+  display: block;
+  font-size: 0.78rem;
+  color: #757575;
+  margin-bottom: 4px;
+}
+
+.input-prefix-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #d4c4c7;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.currency-symbol {
+  padding: 5px 8px;
+  background-color: #fdf2f4;
+  color: #881337;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-right: 1px solid #d4c4c7;
+}
+
+.price-box-input {
+  width: 100%;
+  border: none;
+  padding: 5px 8px;
+  font-size: 0.85rem;
+  outline: none;
+}
+
+.btn-sidebar-apply {
+  width: 100%;
+  padding: 8px;
+  background-color: #ffffff;
+  border: 1px solid #d4c4c7;
+  color: #881337;
+  font-size: 0.82rem;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.15s;
+}
+
+.btn-sidebar-apply:hover {
+  background-color: #881337;
+  color: #ffffff;
+  border-color: #881337;
+}
+
+.btn-sidebar-reset {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  background: none;
+  border: none;
+  color: #be123c;
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: underline;
+}
+
+/* Room Badges */
+.badge-buttons-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.size-badge {
+  padding: 5px 10px;
+  background-color: #f8f1f2;
+  border: 1px solid #ebdada;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #555555;
+  cursor: pointer;
+}
+
+.size-badge.active {
+  background-color: #ffe4e6;
+  color: #881337;
+  border-color: #fda4af;
+}
+
+/* Ratings */
+.stars-label {
+  color: #f59e0b;
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+
+.star-empty {
+  color: #e5e7eb;
+}
+
+/* ==========================================================================
+   5. RIGHT LISTINGS COLUMN
+   ========================================================================== */
+.mdb-listings-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top bar */
+.mdb-listings-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+}
+
+.mdb-items-count {
+  font-size: 0.95rem;
+  color: #212529;
+}
+
+.mdb-topbar-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mdb-sort-select {
+  padding: 6px 12px;
+  border: 1px solid #d4c4c7;
+  border-radius: 4px;
+  background-color: #ffffff;
+  font-size: 0.88rem;
+  color: #495057;
+  cursor: pointer;
+  outline: none;
+}
+
+.mdb-view-toggle {
+  display: flex;
+  border: 1px solid #d4c4c7;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.view-btn {
+  background-color: #ffffff;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  color: #6c757d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.view-btn:hover {
+  background-color: #fff1f2;
+}
+
+.view-btn.active {
+  background-color: #ffe4e6;
+  color: #881337;
+}
+
+/* ==========================================================================
+   6. HOTEL CARDS
+   ========================================================================== */
+.mdb-hotels-container.list-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mdb-hotels-container.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 18px;
+}
+
+/* Main Card */
+.mdb-hotel-card {
+  background-color: #ffffff;
+  border: 1px solid #ebdada;
+  border-radius: 6px;
+  padding: 16px 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  transition: box-shadow 0.2s, transform 0.15s, border-color 0.2s;
+  cursor: pointer;
+}
+
+.mdb-hotel-card:hover {
+  border-color: #f43f5e;
+  box-shadow: 0 6px 16px rgba(136, 19, 55, 0.08);
+  transform: translateY(-2px);
+}
+
+/* List Mode */
+.mdb-hotel-card.list-mode {
+  display: grid;
+  grid-template-columns: 180px 1fr 200px;
+  gap: 22px;
+  align-items: center;
+}
+
+/* Image Container */
+.mdb-card-img-container {
+  width: 100%;
+  height: 150px;
+  background-color: #fdf2f4;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mdb-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.mdb-hotel-card:hover .mdb-card-img {
+  transform: scale(1.04);
+}
+
+/* Middle Details */
+.mdb-card-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mdb-card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #212529;
+  line-height: 1.3;
+}
+
+.mdb-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+}
+
+.stars-amber {
+  color: #f59e0b;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+}
+
+.rating-number {
+  color: #495057;
+  font-weight: 600;
+}
+
+.rating-orders {
+  color: #757575;
+}
+
+.mdb-card-description {
+  font-size: 0.88rem;
+  color: #555555;
+  line-height: 1.5;
+}
+
+.mdb-location-tag {
+  font-size: 0.8rem;
+  color: #757575;
+  margin-top: 4px;
+}
+
+/* Actions Column */
+.mdb-card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-left: 1px solid #f5e6e8;
+  padding-left: 20px;
+}
+
+.mdb-price-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.mdb-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.mdb-current-price {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #881337; /* Distinctive Crimson Price */
+}
+
+.mdb-original-price {
+  font-size: 0.9rem;
+  color: #9ca3af;
+  text-decoration: line-through;
+}
+
+.mdb-free-shipping {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #059669; /* Emerald Green */
+}
+
+/* Action Buttons */
+.mdb-btn-row {
+  display: flex;
+  gap: 8px;
+}
+
+.mdb-btn-primary {
+  flex: 1;
+  background-color: #881337;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(136, 19, 55, 0.2);
+  transition: background-color 0.15s;
+}
+
+.mdb-btn-primary:hover {
+  background-color: #700c2a;
+}
+
+.mdb-btn-wishlist {
+  background-color: #ffffff;
+  border: 1px solid #d4c4c7;
+  border-radius: 4px;
+  padding: 0 10px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.15s, border-color 0.15s;
+}
+
+.mdb-btn-wishlist:hover {
+  background-color: #ffe4e6;
+  border-color: #fda4af;
+}
+
+/* Edit & Delete Buttons */
+.mdb-management-row {
+  display: flex;
+  gap: 6px;
+}
+
+.mdb-btn-edit {
+  flex: 1;
+  background-color: #fdf8f8;
+  border: 1px solid #ebdada;
+  color: #495057;
+  border-radius: 4px;
+  padding: 5px 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.mdb-btn-edit:hover {
+  background-color: #f7eeee;
+  color: #212529;
+}
+
+.mdb-btn-delete {
+  flex: 1;
+  background-color: #fff5f5;
+  border: 1px solid #fed7d7;
+  color: #c53030;
+  border-radius: 4px;
+  padding: 5px 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.mdb-btn-delete:hover {
+  background-color: #feb2b2;
+}
+
+/* Grid Mode Card Adjustments */
+.mdb-hotel-card.grid-mode {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.mdb-hotel-card.grid-mode .mdb-card-img-container {
+  height: 180px;
+}
+
+.mdb-hotel-card.grid-mode .mdb-card-actions {
+  border-left: none;
+  padding-left: 0;
+  border-top: 1px solid #f5e6e8;
+  padding-top: 12px;
+}
+
+/* ==========================================================================
+   7. PAGINATION
+   ========================================================================== */
+.mdb-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  margin-top: 32px;
+}
+
+.mdb-page-item {
+  min-width: 34px;
+  height: 34px;
+  padding: 0 6px;
+  background-color: #ffffff;
+  border: 1px solid #d4c4c7;
+  border-radius: 4px;
+  color: #495057;
+  font-size: 0.88rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.mdb-page-item:hover:not(:disabled) {
+  background-color: #fff1f2;
+  border-color: #fda4af;
+  color: #881337;
+}
+
+.mdb-page-item.active {
+  background-color: #881337;
+  color: #ffffff;
+  border-color: #881337;
+}
+
+.mdb-page-item:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ==========================================================================
+   8. FOOTER
+   ========================================================================== */
+.mdb-footer {
+  background: linear-gradient(135deg, #881337 0%, #700c2a 100%);
+  color: #ffffff;
+  margin-top: 48px;
+}
+
+.mdb-footer-main {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 24px 30px 24px;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1.6fr;
+  gap: 30px;
+}
+
+.footer-brand-title {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 8px;
+}
+
+.footer-copyright {
+  font-size: 0.88rem;
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+.footer-copyright a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer-heading {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 14px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.15s;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Newsletter */
+.newsletter-desc {
+  font-size: 0.85rem;
+  opacity: 0.9;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.newsletter-form {
+  display: flex;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.newsletter-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: none;
+  font-size: 0.88rem;
+  outline: none;
+  background-color: #ffffff;
+  color: #212529;
+}
+
+.newsletter-btn {
+  background-color: #be123c;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: background-color 0.15s;
+}
+
+.newsletter-btn:hover {
+  background-color: #9f1239;
+}
+
+.newsletter-success {
+  margin-top: 8px;
+  font-size: 0.82rem;
+  color: #a7f3d0;
+}
+
+/* Footer Bottom Strip */
+.mdb-footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.82rem;
+}
+
+.payment-badges {
+  display: flex;
+  gap: 8px;
+}
+
+.pay-badge {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.language-selector {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   9. FORMS & DETAIL PAGE
+   ========================================================================== */
+.mdb-card-container {
+  max-width: 800px;
+  margin: 24px auto;
+  padding: 0 20px;
+}
+
+.mdb-form-card {
+  background-color: #ffffff;
+  border: 1px solid #ebdada;
+  border-radius: 6px;
+  padding: 28px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.mdb-form-card .form-heading {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #881337;
+  margin-bottom: 4px;
+}
+
+.mdb-form-card .form-subheading {
+  font-size: 0.9rem;
+  color: #757575;
+  margin-bottom: 20px;
+}
+
+/* Hotel Form Fields */
+.hotel-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.flex-1 {
+  flex: 1;
+  min-width: 200px;
+}
+
+.form-label {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.required {
+  color: #be123c;
+}
+
+.helper-text {
+  font-weight: normal;
+  color: #64748b;
+}
+
+.form-input,
+.file-input {
+  width: 100%;
+  padding: 0.75rem 0.95rem;
+  border: 1px solid #d4c4c7;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  background-color: #ffffff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #881337;
+  box-shadow: 0 0 0 3px rgba(136, 19, 55, 0.15);
+}
+
+.input-error {
+  border-color: #ef4444 !important;
+  background-color: #fef2f2 !important;
+}
+
+.error-text {
+  font-size: 0.82rem;
+  color: #dc2626;
+  font-weight: 500;
+  margin-top: 0.2rem;
+}
+
+.geo-helper-container {
+  margin-top: -0.6rem;
+  margin-bottom: 0.4rem;
+}
+
+.btn-ghost {
+  background: none;
+  border: none;
+  color: #881337;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 4px 0;
+  text-decoration: underline;
+}
+
+.image-preview-box {
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  border: 1px dashed #d4c4c7;
+  border-radius: 6px;
+  background-color: #faf5f6;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.preview-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #757575;
+}
+
+.preview-image {
+  max-height: 220px;
+  width: auto;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #f5e6e8;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1.1rem;
+  border-radius: 6px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: #881337;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #700c2a;
+}
+
+.btn-secondary {
+  background-color: #f7eeee;
+  color: #334155;
+  border-color: #d4c4c7;
+}
+
+.btn-secondary:hover {
+  background-color: #ebdada;
+}
+
+/* Detail Page */
+.detail-card {
+  background-color: #ffffff;
+  border: 1px solid #ebdada;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.detail-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  background-color: #212529;
+}
+
+.detail-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.detail-price-tag {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  background-color: rgba(33, 37, 41, 0.9);
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+.detail-price-tag .price-amount {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fecdd3;
+}
+
+.detail-content {
+  padding: 24px;
+}
+
+.detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.detail-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #212529;
+}
+
+.coordinates-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #fff1f2;
+  border: 1px solid #fecdd3;
+  color: #881337;
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.detail-description-section h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.detail-description-text {
+  color: #495057;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.geo-distance-card {
+  background-color: #faf5f6;
+  border: 1px solid #ebdada;
+  border-radius: 6px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.map-container {
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #ebdada;
+  margin-top: 10px;
+}
+
+/* ==========================================================================
+   10. TOAST NOTIFICATIONS & SPINNERS
+   ========================================================================== */
+.toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 2000;
+  padding: 12px 18px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #212529;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-left: 4px solid #059669;
+}
+
+.toast-error {
+  border-left-color: #dc3545;
+}
+
+.toast-close {
+  background: none;
+  border: none;
+  color: #adb5bd;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-left: 8px;
+}
+
+.mdb-loading-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+  gap: 12px;
+  color: #757575;
+}
+
+.mdb-spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid #ebdada;
+  border-top-color: #881337;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.mdb-empty-state {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #ffffff;
+  border: 1px dashed #d4c4c7;
+  border-radius: 6px;
+  color: #6c757d;
+}
+
+.empty-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* ==========================================================================
+   11. RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+@media (max-width: 992px) {
+  .mdb-content-container {
+    grid-template-columns: 1fr;
+  }
+
+  .mdb-footer-main {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .newsletter-col {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .mdb-navbar-inner {
+    flex-wrap: wrap;
+  }
+
+  .mdb-search-form {
+    order: 3;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .mdb-hotel-card.list-mode {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .mdb-card-actions {
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid #f5e6e8;
+    padding-top: 12px;
+  }
+
+  .mdb-footer-main {
+    grid-template-columns: 1fr;
+  }
+
+  .newsletter-col {
+    grid-column: span 1;
+  }
+}
