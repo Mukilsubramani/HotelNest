@@ -1,4 +1,4 @@
-// Main App Component with React Router routes and MDB Layout
+// Main App Component with React Router routes
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
@@ -19,7 +19,7 @@ function App() {
       {/* Main Page Routing */}
       <div className="mdb-app-body">
         <Routes>
-          {/* Hotel List View matching MDB design */}
+          {/* Hotel List View */}
           <Route path="/" element={<HotelListPage />} />
 
           {/* Add Hotel Form */}
@@ -36,7 +36,7 @@ function App() {
         </Routes>
       </div>
 
-      {/* Full-width MDB Footer */}
+      {/* Full-width Footer */}
       <Footer />
 
       {/* Global Toast Notification */}

@@ -1,7 +1,11 @@
 // API service functions to interact with the Express backend
-// We use the browser's native fetch API - clean, dependency-free, and beginner-friendly
+// Uses native fetch — no extra dependencies needed
 
-const BASE_URL = '/api/hotels';
+// In production, VITE_API_URL should point to the deployed Render backend
+// In development, Vite proxy forwards /api to localhost:5000
+const BASE_URL = import.meta.env.VITE_API_URL
+  ? `${import.meta.env.VITE_API_URL}/api/hotels`
+  : '/api/hotels';
 
 /**
  * Fetch hotels with search query, price filters, and pagination offset/limit

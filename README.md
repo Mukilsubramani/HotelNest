@@ -1,7 +1,7 @@
-# 🏨 Hotel List Page — Full-Stack CRUD Web Application
+# 🏨 Hotel Nest — Full-Stack Hotel Listings & Management Web Application
 
-> **Final-Year Student Project**  
-> A clean, beginner-friendly full-stack web application designed for exploring, searching, filtering, and managing hotel listings with native PostgreSQL queries, file upload storage, and map location embeds.
+> **Project by Mukil**  
+> A clean, modern full-stack web application for exploring, searching, filtering, and managing hotel listings with native PostgreSQL queries, image upload storage, and interactive OpenStreetMap embeds.
 
 ---
 

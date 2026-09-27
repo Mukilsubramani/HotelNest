@@ -1,4 +1,4 @@
-// MDB-style Full-width Footer matching the bottom of the screenshot
+// Page footer with navigation links and newsletter
 import React, { useState } from 'react';
 
 const Footer = () => {
@@ -18,11 +18,11 @@ const Footer = () => {
     <footer className="mdb-footer">
       <div className="mdb-footer-main">
         <div className="mdb-footer-col brand-col">
-          <div className="footer-brand-title">MDB</div>
+          <div className="footer-brand-title">Hotel Nest</div>
           <p className="footer-copyright">
             &copy; 2026 Copyright:{' '}
-            <a target="_blank" rel="noreferrer">
-              MDBootstrap
+            <a href="/" rel="noreferrer">
+              Hotel Nest
             </a>
           </p>
         </div>

@@ -11,8 +11,24 @@ const hotelRoutes = require('./routes/hotelRoutes');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Allow cross-origin requests from the React frontend
-app.use(cors());
+// Allow cross-origin requests from the React frontend (dev + production)
+const allowedOrigins = [
+  'http://localhost:3000',
+  'http://localhost:5173',
+  process.env.FRONTEND_URL,
+].filter(Boolean);
+
+app.use(cors({
+  origin: (origin, callback) => {
+    // Allow requests with no origin (mobile apps, curl, Postman)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.includes(origin) || origin.endsWith('.vercel.app')) {
+      return callback(null, true);
+    }
+    return callback(new Error('CORS not allowed from: ' + origin));
+  },
+  credentials: true,
+}));
 
 // Parse JSON and form data from incoming requests
 app.use(express.json());

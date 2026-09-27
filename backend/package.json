@@ -1,7 +1,7 @@
 {
-  "name": "hotel-list-backend",
+  "name": "hotel-nest-backend",
   "version": "1.0.0",
-  "description": "Backend API for Hotel List Page student project using Express and PostgreSQL",
+  "description": "Backend API for Hotel Nest project using Express and PostgreSQL",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

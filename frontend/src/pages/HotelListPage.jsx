@@ -1,4 +1,4 @@
-// Hotel List Page with MDB 2-column layout matching screenshot
+// Hotel List Page
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useDispatch, useSelector } from 'react-redux';
@@ -13,7 +13,7 @@ const HotelListPage = () => {
     (state) => state.hotels
   );
 
-  // View mode: 'list' (default matching screenshot) or 'grid'
+  // View mode: 'list' (default) or 'grid'
   const [viewMode, setViewMode] = useState('list');
   const [sortOption, setSortOption] = useState('best');
 
@@ -33,10 +33,10 @@ const HotelListPage = () => {
   return (
     <main className="mdb-main-wrapper">
       <Helmet>
-        <title>Hotels &amp; Luxury Stays | MDB Hotel Directory</title>
+        <title>Hotels &amp; Luxury Stays | Hotel Nest</title>
         <meta
           name="description"
-          content="Explore, search and compare top luxury hotels, resorts, and vacation stays."
+          content="Explore, search and compare top luxury hotels, resorts, and vacation stays on Hotel Nest."
         />
       </Helmet>
 

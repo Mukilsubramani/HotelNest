@@ -1,4 +1,4 @@
-// Page for editing an existing hotel using the reusable HotelForm with MDB styling
+// Edit Hotel Page
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
@@ -29,10 +29,10 @@ const EditHotelPage = () => {
   return (
     <main className="mdb-main-wrapper">
       <Helmet>
-        <title>{hotel ? `Edit: ${hotel.title}` : 'Edit Hotel'} | MDB Hotel Directory</title>
+        <title>{hotel ? `Edit: ${hotel.title}` : 'Edit Hotel'} | Hotel Nest</title>
         <meta
           name="description"
-          content={`Edit and update details for ${hotel?.title || 'hotel'}.`}
+          content={`Edit and update details for ${hotel?.title || 'hotel'} on Hotel Nest.`}
         />
       </Helmet>
 

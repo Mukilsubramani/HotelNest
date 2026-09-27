@@ -1,4 +1,4 @@
-// MDB-style Top Navigation Bar with embedded search and action links
+// Navigation bar with search and shortcuts
 import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
@@ -25,13 +25,10 @@ const Navbar = () => {
   return (
     <header className="mdb-navbar">
       <div className="mdb-navbar-inner">
-        {/* Brand Logo with hotel image and MDB styling */}
+        {/* Brand Logo with Hotel Nest branding */}
         <Link to="/" className="mdb-brand">
-          <img src="/hotel-favicon.jpg" alt="Hotel Icon" className="brand-logo-img" />
-          <span className="brand-letter brand-m">M</span>
-          <span className="brand-letter brand-d">D</span>
-          <span className="brand-letter brand-b">B</span>
-          <span className="brand-subtitle">Hotels</span>
+          <img src="/hotel-favicon.jpg" alt="Hotel Nest Logo" className="brand-logo-img" />
+          <span className="brand-nest-title">Hotel Nest</span>
         </Link>
 
         {/* Center Search Bar with attached blue search button */}

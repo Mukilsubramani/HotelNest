@@ -1,4 +1,4 @@
-// Hotel Detail Page with MDB styling, dynamic SEO tags, and embedded location map
+// Hotel Detail Page with location map and booking details
 import React, { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
@@ -122,7 +122,7 @@ const HotelDetail = () => {
     <main className="mdb-main-wrapper">
       {/* Dynamic SEO Tags via react-helmet */}
       <Helmet>
-        <title>{hotel.title} - Hotel Details &amp; Location | MDB Hotels</title>
+        <title>{hotel.title} - Hotel Details &amp; Location | Hotel Nest</title>
         <meta
           name="description"
           content={`${hotel.title}: ${hotel.description.slice(0, 150)}. Book for $${hotel.price}/night.`}

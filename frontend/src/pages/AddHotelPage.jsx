@@ -1,4 +1,4 @@
-// Page for adding a new hotel using the reusable HotelForm with MDB styling
+// Add New Hotel Page
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -8,10 +8,10 @@ const AddHotelPage = () => {
   return (
     <main className="mdb-main-wrapper">
       <Helmet>
-        <title>Add New Hotel | MDB Hotel Directory</title>
+        <title>Add New Hotel | Hotel Nest</title>
         <meta
           name="description"
-          content="List a new hotel with location coordinates, pricing, photos, and amenities."
+          content="List a new hotel with location coordinates, pricing, photos, and amenities on Hotel Nest."
         />
       </Helmet>
 
