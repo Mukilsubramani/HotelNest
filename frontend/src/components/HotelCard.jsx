@@ -3,6 +3,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { deleteHotel } from '../redux/hotelSlice';
+import { getImageUrl } from '../services/api';
 
 const HotelCard = ({ hotel, viewMode = 'list' }) => {
   const navigate = useNavigate();
@@ -38,7 +39,7 @@ const HotelCard = ({ hotel, viewMode = 'list' }) => {
     }
   };
 
-  const imageUrl = hotel.image_path || '/placeholder-hotel.svg';
+  const imageUrl = getImageUrl(hotel.image_path, hotel.title);
 
   return (
     <article
@@ -55,6 +56,10 @@ const HotelCard = ({ hotel, viewMode = 'list' }) => {
           alt={`Photo of ${hotel.title}`}
           className="mdb-card-img"
           loading="lazy"
+          onError={(e) => {
+            e.target.onerror = null;
+            e.target.src = '/images/hotel-1.jpg';
+          }}
         />
       </div>
 

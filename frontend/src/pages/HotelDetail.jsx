@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { useDispatch } from 'react-redux';
-import { getHotelByIdApi } from '../services/api';
+import { getHotelByIdApi, getImageUrl } from '../services/api';
 import { deleteHotel } from '../redux/hotelSlice';
 
 const HotelDetail = () => {
@@ -149,9 +149,13 @@ const HotelDetail = () => {
           {/* Detail Hero Image */}
           <div className="detail-image-wrapper">
             <img
-              src={hotel.image_path || '/placeholder-hotel.svg'}
+              src={getImageUrl(hotel.image_path, hotel.title)}
               alt={`Detailed photograph of ${hotel.title}`}
               className="detail-image"
+              onError={(e) => {
+                e.target.onerror = null;
+                e.target.src = '/images/hotel-1.jpg';
+              }}
             />
             <div className="detail-price-tag">
               <span className="price-amount">${Number(hotel.price).toFixed(2)}</span>

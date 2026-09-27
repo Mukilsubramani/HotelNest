@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { createHotel, updateHotel } from '../redux/hotelSlice';
+import { getImageUrl } from '../services/api';
 
 const HotelForm = ({ initialData = null, isEditMode = false }) => {
   const navigate = useNavigate();
@@ -32,7 +33,7 @@ const HotelForm = ({ initialData = null, isEditMode = false }) => {
       setLongitude(initialData.longitude !== undefined ? initialData.longitude.toString() : '');
       setPrice(initialData.price !== undefined ? initialData.price.toString() : '');
       if (initialData.image_path) {
-        setImagePreview(initialData.image_path);
+        setImagePreview(getImageUrl(initialData.image_path, initialData.title));
       }
     }
   }, [initialData]);

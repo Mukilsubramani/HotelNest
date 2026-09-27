@@ -8,6 +8,49 @@ const BASE_URL = import.meta.env.VITE_API_URL
   : '/api/hotels';
 
 /**
+ * Resolve hotel image URL supporting bundled high-res images and backend uploads
+ */
+export function getImageUrl(imagePath, hotelTitle = '') {
+  if (!imagePath) {
+    const title = (hotelTitle || '').toLowerCase();
+    if (title.includes('grand palace')) return '/images/hotel-1.jpg';
+    if (title.includes('mountain whisper')) return '/images/hotel-2.jpg';
+    if (title.includes('metropolis')) return '/images/hotel-3.jpg';
+    if (title.includes('sunset bay')) return '/images/hotel-4.jpg';
+    return '/images/hotel-1.jpg';
+  }
+
+  if (imagePath.startsWith('http://') || imagePath.startsWith('https://')) {
+    return imagePath;
+  }
+
+  if (imagePath.startsWith('/images/')) {
+    return imagePath;
+  }
+
+  const title = (hotelTitle || '').toLowerCase();
+  if (imagePath.includes('grand-palace') || title.includes('grand palace')) {
+    return '/images/hotel-1.jpg';
+  }
+  if (imagePath.includes('mountain-resort') || title.includes('mountain whisper')) {
+    return '/images/hotel-2.jpg';
+  }
+  if (imagePath.includes('city-boutique') || title.includes('metropolis')) {
+    return '/images/hotel-3.jpg';
+  }
+  if (imagePath.includes('sunset-villa') || title.includes('sunset bay')) {
+    return '/images/hotel-4.jpg';
+  }
+
+  if (imagePath.startsWith('/uploads/')) {
+    const backendUrl = import.meta.env.VITE_API_URL ? import.meta.env.VITE_API_URL.replace(/\/$/, '') : '';
+    return backendUrl ? `${backendUrl}${imagePath}` : imagePath;
+  }
+
+  return imagePath;
+}
+
+/**
  * Fetch hotels with search query, price filters, and pagination offset/limit
  */
 export async function getHotelsApi({ search = '', minPrice = '', maxPrice = '', offset = 0, limit = 6 }) {

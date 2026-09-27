@@ -98,7 +98,7 @@ async function seedInitialHotelsIfEmpty() {
         [
           'The Grand Palace Hotel',
           'Experience five-star luxury with panoramic seaside views, fine dining restaurants, infinity swimming pool, and round-the-clock concierge services.',
-          '/uploads/hotel-grand-palace.svg',
+          '/images/hotel-1.jpg',
           13.0827,
           80.2707,
           250.0,
@@ -106,7 +106,7 @@ async function seedInitialHotelsIfEmpty() {
         [
           'Mountain Whisper Resort',
           'Nestled among tranquil pine hills, this cozy resort offers scenic mountain hiking trails, fireplace suites, warm breakfast, and spa treatments.',
-          '/uploads/hotel-mountain-resort.svg',
+          '/images/hotel-2.jpg',
           11.4102,
           76.695,
           140.0,
@@ -114,7 +114,7 @@ async function seedInitialHotelsIfEmpty() {
         [
           'Metropolis Boutique Hotel',
           'A sleek and stylish urban sanctuary located right in the city center. Walk to shopping centers, art galleries, and enjoy our signature rooftop café.',
-          '/uploads/hotel-city-boutique.svg',
+          '/images/hotel-3.jpg',
           12.9716,
           77.5946,
           180.0,
@@ -122,7 +122,7 @@ async function seedInitialHotelsIfEmpty() {
         [
           'Sunset Bay Beachfront Villa',
           'Unwind in private beachfront villas with direct ocean access, sunset sailing tours, complimentary cocktails, and tropical garden terraces.',
-          '/uploads/hotel-sunset-villa.svg',
+          '/images/hotel-4.jpg',
           15.2993,
           74.124,
           320.0,
